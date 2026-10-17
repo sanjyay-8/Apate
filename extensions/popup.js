@@ -20,7 +20,7 @@ const scoreContainer = document.getElementById("scoreContainer");
 const scoreValue = document.getElementById("scoreValue");
 const scoreNote = document.getElementById("scoreNote");
 
-const API_URL = "http://148.100.98.52:8000/api/analyze";
+const API_URL = "http://127.0.0.1:8000/api/analyze";
 const USE_MOCK_DATA = false;
 
 const MAX_IMAGE_SIZE = 5 * 1024 * 1024;
