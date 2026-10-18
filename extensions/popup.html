@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APATE</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+    <main class="app">
+
+        <header class="header">
+            <div class="brand">
+                <div class="logo">A</div>
+                <div>
+                    <h1>APATE</h1>
+                    <p>AUTHENTICITY INTELLIGENCE</p>
+                </div>
+            </div>
+
+            <span class="status-dot"></span>
+        </header>
+
+        <section class="hero">
+            <span class="eyebrow">DIGITAL TRUST, REIMAGINED</span>
+
+            <h2>Can you trust<br>what you see?</h2>
+
+            <p class="description">
+                Analyse suspicious images for potential signs of
+                AI manipulation with APATE.
+            </p>
+        </section>
+
+        <section class="scanner">
+
+            <label for="imageInput" class="upload-area" id="uploadArea">
+                <div class="upload-icon">↑</div>
+
+                <h3 id="uploadTitle">Drop an image here</h3>
+
+                <p id="uploadDescription">
+                    or click to browse your files
+                </p>
+
+                <span class="file-types">
+                    PNG · JPG · WEBP
+                </span>
+
+                <input
+                    type="file"
+                    id="imageInput"
+                    accept="image/png,image/jpeg,image/webp"
+                    hidden
+                >
+            </label>
+
+            <div class="preview-container" id="previewContainer" hidden>
+                <img id="imagePreview" alt="Selected image preview">
+                <button id="removeImage" class="remove-button" type="button">
+                    Remove image
+                </button>
+            </div>
+
+            <button id="analyseButton" class="analyse-button" disabled>
+                <span id="buttonText">Analyse image</span>
+                <span aria-hidden="true"> ↗</span>
+            </button>
+
+            <p id="errorMessage" class="error-message" role="alert"></p>
+
+        </section>
+
+        <section class="result-card" id="resultCard" hidden>
+            <div class="result-heading">
+                <span class="result-label">ANALYSIS RESULT</span>
+                <span class="result-badge" id="resultBadge">COMPLETE</span>
+            </div>
+
+            <h3 id="resultTitle">Assessment unavailable</h3>
+
+            <p id="resultMessage"></p>
+
+            <div class="score-container" id="scoreContainer" hidden>
+                <div class="score-header">
+                    <span>Model score</span>
+                    <strong id="scoreValue">—</strong>
+                </div>
+
+                <p class="score-note" id="scoreNote"></p>
+            </div>
+        </section>
+
+        <footer>
+            <p>
+                AI assessments are not proof of authenticity.
+                Results may be incorrect.
+            </p>
+
+            <span>APATE © 2026</span>
+        </footer>
+
+    </main>
+
+    <script src="popup.js"></script>
+</body>
+</html>

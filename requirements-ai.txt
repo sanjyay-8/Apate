@@ -1,0 +1,9 @@
+
+torch
+torchvision
+timm==1.0.30
+huggingface_hub
+numpy
+Pillow
+opencv-python==4.10.0.84
+transformers
